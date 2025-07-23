@@ -1,0 +1,87 @@
+*{
+  border: 0;
+  box-sizing: border-box;
+}
+
+
+:root{
+  --Orange500: hsl(25, 97%, 53%);
+  --White: hsl(0, 100%, 100%);
+  --Grey500: hsl(217, 12%, 63%);
+  --Grey900: hsl(213, 19%, 18%);
+  --Grey950: hsl(216, 12%, 8%);
+}
+
+body{
+  background-color: var(--Grey950);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+  font-family: "Overpass",sans-serif;
+}
+
+main{
+  background-color: var(--Grey900);
+  width: 45%;
+}
+
+.rating-container{
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.rating-container img{
+  padding: 1rem;
+  border-radius: 1.5rem;
+  background-color: var(--Grey950);
+}
+
+.rating-container h1{
+  color: var(--White);
+  font-weight: 600;
+}
+
+.rating-container p{
+  color: var(--Grey500);
+  font-weight: 400;
+  line-height: 1.5;
+
+}
+
+.rating-container ul{
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-left: -1rem;
+}
+
+.rating-container ul li {
+  background-color: var(--Grey950);
+  padding: 1rem 1.4rem;
+  border-radius: 50%;
+  color: var(--White);
+  cursor: pointer;
+  transition: 1s;
+}
+
+.rating-container button{
+  background-color: var(--Orange500);
+  color: var(--Grey950);
+  width: 100%;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.thankyou-container{
+  display: none;
+}
