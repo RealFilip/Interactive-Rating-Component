@@ -9,79 +9,133 @@
   --White: hsl(0, 100%, 100%);
   --Grey500: hsl(217, 12%, 63%);
   --Grey900: hsl(213, 19%, 18%);
+  --Grey925: hsl(220, 8%, 15%);
   --Grey950: hsl(216, 12%, 8%);
 }
 
 body{
-  background-color: var(--Grey950);
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100dvh;
-  font-family: "Overpass",sans-serif;
-}
-
-main{
-  background-color: var(--Grey900);
-  width: 45%;
+  background-color: var(--Grey950);
 }
 
 .rating-container{
-  border-radius: 1rem;
-  padding: 2rem;
+  width: 20rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
+  background: linear-gradient(var(--Grey900),var(--Grey925));
+  position: absolute;
+}
+
+.rating-container .icon-container{
+  width: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 0.9rem;
+  border-radius: 1.5rem;
+  background-color: var(--Grey925);
 }
 
 .rating-container img{
-  padding: 1rem;
-  border-radius: 1.5rem;
-  background-color: var(--Grey950);
+  width: 0.4rem;
 }
+
 
 .rating-container h1{
   color: var(--White);
   font-weight: 600;
 }
 
-.rating-container p{
+.rating-container p {
+  margin-top: -1.7rem;
   color: var(--Grey500);
-  font-weight: 400;
   line-height: 1.5;
-
+  font-size: 0.8rem;
 }
 
-.rating-container ul{
-  list-style: none;
+.rating-container form{
   display: flex;
-  gap: 1rem;
-  align-items: flex-start;
-  justify-content: space-between;
-  padding: 1rem;
-  margin-left: -1rem;
+  flex-direction: column;
+  gap: 1.8rem;
 }
 
-.rating-container ul li {
-  background-color: var(--Grey950);
-  padding: 1rem 1.4rem;
-  border-radius: 50%;
-  color: var(--White);
+.rating-container form .rating-nums{
+  display: flex;
+  justify-content: space-around;
+}
+
+.rating-container form input[type="radio"]{
+  display: none;
+}
+
+.rating-container form span{
+  padding: 0.5rem 0.9rem;
+  border-radius: 1.6rem;
+  color: var(--Grey500);
+  background-color: var(--Grey900);
+  font-size: 0.8rem;
+  font-weight: 500;
   cursor: pointer;
-  transition: 1s;
+  transition: 1s ease-in-out;
 }
 
-.rating-container button{
+
+.rating-container form span:hover{
   background-color: var(--Orange500);
   color: var(--Grey950);
-  width: 100%;
-  padding: 1rem;
-  border-radius: 1.5rem;
-  font-size: 1.2rem;
-  font-weight: 600;
-  cursor: pointer;
+} 
+
+.rating-container form button{
+  background-color: var(--Orange500);
+  padding: 0.6rem;
+  border-radius: 1rem;
+  font-size: 0.6rem;
+  font-weight: 700;
 }
 
+
+/* Thank you section */
+
 .thankyou-container{
-  display: none;
+  width: 20rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: linear-gradient(var(--Grey900),var(--Grey925));
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.thankyou-container .display-img{
+  width: 6rem;
+  height: 4rem;
+}
+
+.thankyou-container .rating-paragraph{
+  background-color: var(--Grey925);
+  padding: 0.4rem 0.8rem;
+  font-size: 0.8rem;
+  color: var(--Orange500);
+  border-radius: 1.2rem;
+}
+
+.thankyou-container h1{
+  color: var(--White);
+  font-size: 200;
+}
+
+.thankyou-container .rating-message{
+  color: var(--Grey500);
+  font-size: 0.8rem;
+  line-height: 2;
+  text-align: center;
 }
