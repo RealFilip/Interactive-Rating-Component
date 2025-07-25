@@ -77,8 +77,6 @@ body{
 .rating-container form span{
   padding: 0.5rem 0.9rem;
   border-radius: 1.6rem;
-  color: var(--Grey500);
-  background-color: var(--Grey900);
   font-size: 0.8rem;
   font-weight: 500;
   cursor: pointer;
@@ -90,6 +88,16 @@ body{
   background-color: var(--Orange500);
   color: var(--Grey950);
 } 
+
+.span-unclicked {
+  color: var(--Grey500);
+  background-color: var(--Grey900);
+}
+
+.span-clicked {
+  background-color: white;
+  color: black;
+}
 
 .rating-container form button{
   background-color: var(--Orange500);
