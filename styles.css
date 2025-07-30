@@ -109,7 +109,9 @@ button {
   border-radius: 1rem;
   font-size: 0.6rem;
   font-weight: 700;
+  cursor: pointer;
 }
+
 
 
 /* Thank you section */
