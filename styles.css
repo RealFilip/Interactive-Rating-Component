@@ -21,6 +21,10 @@ body{
   background-color: var(--Grey950);
 }
 
+button {
+  cursor: pointer;
+}
+
 .rating-container{
   width: 20rem;
   border-radius: 0.5rem;

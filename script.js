@@ -19,3 +19,18 @@ ratingsSpans.forEach( (el) => {
         currentSpanAssigned = true;
     })
 })
+
+// code for submission of form
+const rating = document.getElementById("rating");
+const ty = document.getElementById("thank-you");
+const selectedRating = document.getElementById("selected-rating");
+
+rating.addEventListener("submit", function(event) {
+    event.preventDefault();
+    
+    if (currentSpanNumber >= 0) {
+        rating.style.display = "none";
+        ty.style.display = "block";
+        selectedRating.textContent = `You selected ${currentSpanNumber} out of 5`;
+    }
+});
