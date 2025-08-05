@@ -21,9 +21,10 @@ ratingsSpans.forEach( (el) => {
 })
 
 // code for submission of form
-const rating = document.getElementById("rating");
+const rating = document.getElementById("rating-section");
 const ty = document.getElementById("thank-you");
 const selectedRating = document.getElementById("selected-rating");
+const errorMessage = document.getElementById('error-message');
 
 rating.addEventListener("submit", function(event) {
     event.preventDefault();
@@ -31,6 +32,8 @@ rating.addEventListener("submit", function(event) {
     if (currentSpanNumber >= 0) {
         rating.style.display = "none";
         ty.style.display = "block";
-        selectedRating.textContent = `You selected ${currentSpanNumber} out of 5`;
+        selectedRating.textContent = currentSpanNumber;
+    } else{
+        errorMessage.style.display = 'inline';
     }
 });

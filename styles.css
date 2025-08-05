@@ -11,6 +11,8 @@
   --Grey900: hsl(213, 19%, 18%);
   --Grey925: hsl(220, 8%, 15%);
   --Grey950: hsl(216, 12%, 8%);
+  --Red:  rgb(196, 75, 75);
+  --Black: rgb(8, 8, 8);
 }
 
 body{
@@ -66,7 +68,7 @@ button {
 .rating-container form{
   display: flex;
   flex-direction: column;
-  gap: 1.8rem;
+  gap: 2rem;
 }
 
 .rating-container form .rating-nums{
@@ -100,7 +102,7 @@ button {
 
 .span-clicked {
   background-color: white;
-  color: black;
+  color: var(--Black)
 }
 
 .rating-container form button{
@@ -112,6 +114,12 @@ button {
   cursor: pointer;
 }
 
+.rating-container form .error-message{ 
+  color: var(--Red);
+  text-align: center;
+  display: none;
+  justify-content: center;
+}
 
 
 /* Thank you section */
@@ -141,6 +149,9 @@ button {
   font-size: 0.8rem;
   color: var(--Orange500);
   border-radius: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .thankyou-container h1{
